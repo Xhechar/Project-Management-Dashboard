@@ -29,13 +29,6 @@ addBtn.addEventListener('click', () => {
 
     projectArray.push(projectsObject);
 
-    if (deleteItem == '') {
-      console.log('empty');
-    }
-    else {
-      projectArray.splice(deleteItem, 1);
-    }
-
     localStorage.setItem('storage', JSON.stringify(projectArray));
 
     displayProjects();
@@ -82,7 +75,14 @@ function displayProjects() {
     console.log('deepin another function');
 
     deleteBtn.addEventListener('click', () => {
-      deleteItem = index;
+      // deleteItem = index;
+      if (deleteItem == '') {
+        console.log('empty');
+      }
+      else {
+        projectArray.splice(deleteItem, 1);
+        localStorage.setItem('storage', JSON.stringify(projectArray));
+      }
       displayProjects();
     })
     
@@ -96,5 +96,5 @@ function displayProjects() {
     })
 
   })
-
+  inputBar.textContent = '';
 }
