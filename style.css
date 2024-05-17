@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-holder{
+  background-color: lightblue;
+  width: 85vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-container{
+  background-color: rgba(0, 0, 66, 0.815);
+  height: 100%;
+  width: 75%;
+  display: grid;
+  grid-template-rows: 30% 1fr 10%;
+  align-items: center;
+}
+
+.header-and-input {
+  background-color: lightgreen;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-and-button{
+  background-color: lightgray;
+  position: relative;
+}
+
+.input-and-button input {
+  width: 100%;
+  height: 90%;
+}
+
+.input-and-button button {
+  position: absolute;
+}
+
+.dynamic-body {
+  background-color: lightseagreen ;
+  width: 60%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+.access-buttons{
+}
