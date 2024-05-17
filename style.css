@@ -3,16 +3,21 @@
   padding: 0;
 }
 
+button {
+  background-color: lightgreen;
+  border: none;
+}
+
 main {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(3, 3, 70, 0.753);
 }
 
 .items-holder{
-  background-color: lightblue;
   width: 85vw;
   height: 75vh;
   display: flex;
@@ -21,7 +26,7 @@ main {
 }
 
 .centered-container{
-  background-color: rgba(0, 0, 66, 0.815);
+  background-color: rgba(1, 1, 34, 0.815);
   height: 100%;
   width: 75%;
   display: grid;
@@ -30,35 +35,75 @@ main {
 }
 
 .header-and-input {
-  background-color: lightgreen;
-  width: 100%;
+  width: 60%;
   height: 100%;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20%;
   justify-content: center;
   align-items: center;
 }
 
+.header-and-input h1 {
+  color: white;
+}
+
 .input-and-button{
-  background-color: lightgray;
   position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .input-and-button input {
+  height: 35%;
   width: 100%;
-  height: 90%;
 }
 
 .input-and-button button {
   position: absolute;
+  right: 0;
+  padding: 2%;
 }
 
 .dynamic-body {
-  background-color: lightseagreen ;
   width: 60%;
   height: 100%;
   margin: 0px auto;
+  box-shadow: 2px 2px 2px rgb(107, 114, 107);
+}
+
+.each-project {
+  width: 100%;
+  height: 12%;
+  border-bottom: 1px solid rgb(107, 114, 107);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-project{
+  padding: 10px;
+}
+
+.each-project p {
+  color: white;
+  padding-left: 10px;
+  font-size: 18px;
 }
 
 .access-buttons{
+  width: 60%;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.access-buttons button {
+  padding: 2%;
+  width: 30%;
 }

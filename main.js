@@ -7,6 +7,7 @@ let errorMsg = document.querySelector('.display-error');
 let dynamicBody = document.querySelector('.dynamic-body');
 
 let projectArray = [];
+let deleteItem;
 
 addBtn.addEventListener('click', () => {
 
@@ -27,6 +28,13 @@ addBtn.addEventListener('click', () => {
     }
 
     projectArray.push(projectsObject);
+
+    if (deleteItem == '') {
+      console.log('empty');
+    }
+    else {
+      projectArray.splice(deleteItem, 1);
+    }
 
     localStorage.setItem('storage', JSON.stringify(projectArray));
 
@@ -63,7 +71,7 @@ function displayProjects() {
     displayedProjectItem.textContent = project.newItem;
 
     let deleteBtn = document.createElement('button');
-    deleteBtn.className = 'delete-preject';
+    deleteBtn.className = 'delete-project';
     deleteBtn.textContent = "Delete";
 
     displayedDiv.appendChild(displayedProjectItem);
@@ -74,8 +82,7 @@ function displayProjects() {
     console.log('deepin another function');
 
     deleteBtn.addEventListener('click', () => {
-      console.log('delete');
-      projectArray.splice(index, 1);
+      deleteItem = index;
       displayProjects();
     })
     
