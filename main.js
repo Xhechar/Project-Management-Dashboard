@@ -7,7 +7,6 @@ let errorMsg = document.querySelector('.display-error');
 let dynamicBody = document.querySelector('.dynamic-body');
 
 let projectArray = [];
-let deleteItem;
 
 addBtn.addEventListener('click', () => {
 
@@ -75,8 +74,9 @@ function displayProjects() {
     console.log('deepin another function');
 
     deleteBtn.addEventListener('click', () => {
-      // deleteItem = index;
-      if (deleteItem == '') {
+      deleteItem = index;
+      console.log(deleteBtn);
+      if (deleteItem === '') {
         console.log('empty');
       }
       else {
@@ -85,16 +85,6 @@ function displayProjects() {
       }
       displayProjects();
     })
-    
-
-    viewOne.addEventListener('click', () => {
-
-      let randomNumber = (Math.random()) * 10;
-
-      retrievedProjects.slice(randomNumber, randomNumber);
-
-    })
-
   })
-  inputBar.textContent = '';
+
 }
