@@ -6,6 +6,8 @@ let inputBar = document.querySelector('.input-bar')
 let errorMsg = document.querySelector('.display-error');
 let dynamicBody = document.querySelector('.dynamic-body');
 
+let notifications = document.querySelector('.p1');
+
 let projectArray = [];
 
 let viewOneClicked = false;
@@ -130,6 +132,8 @@ function displayProjects() {
   }
   else {
     retrievedProjects.forEach((project, index) => {
+
+      notifications.textContent = (index + 1);
 
       let displayedDiv = document.createElement('div');
       displayedDiv.className = 'each-project'

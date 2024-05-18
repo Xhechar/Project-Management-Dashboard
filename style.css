@@ -108,3 +108,16 @@ main {
   padding: 2%;
   width: 30%;
 }
+
+.p1 {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  color: white;
+  background-color: rgba(194, 0, 0, 0.952);
+  width: 17px;
+  text-align: center;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 13px;
+}
